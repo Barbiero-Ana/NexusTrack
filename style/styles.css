@@ -137,6 +137,76 @@ body {
   transform: scale(1.05); /* Pequeno efeito de zoom ao passar o mouse */
 }
 
+
+/* Menu sanduíche */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #8B5DFF;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  #menu-toggle:checked + .menu-icon + nav .nav-links {
+    display: flex;
+  }
+}
+
+/* Hero */
+.hero {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.hero .highlight {
+  color: #8B5DFF;
+  font-weight: bold;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #8B5DFF;
+}
+
+.item p {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .site-header {
     flex-direction: column;
