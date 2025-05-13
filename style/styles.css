@@ -38,7 +38,7 @@ html {
   font-weight: 700;
   font-size: 1.4rem;
   color: #8B5DFF;
-  position: absolute; /* Faz com que a logo se posicione fora do fluxo do flex */
+  justify-content: space-between; /* Faz com que a logo se posicione fora do fluxo do flex */
   left: 30px; /* Ajuste a distância da logo da borda esquerda */
 }
 
@@ -299,70 +299,70 @@ html {
   }
 }
 
-/* Equipe */
+.team {
+  color: #fff; /* Cor do texto branca */
+  padding: 50px 20px;
+}
+
 .team h2 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #8B5DFF;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #8B5DFF; /* Cor roxa para o título */
 }
 
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 30px;
-  margin-top: auto;
-  justify-items: center;
+  display: flex;
+  justify-content: space-between; /* Para que fiquem um ao lado do outro, ocupando todo o espaço disponível */
+  gap: 20px; /* Espaçamento entre os cards */
+  flex-wrap: nowrap; /* Garante que não quebre linha */
+  justify-content: center; /* Alinha os cards ao centro */
 }
 
 .member {
-  background-color: #1e1e1e;
-  border-radius: 15px;
+  background-color: #1e1e1e; /* Cor do fundo do card */
+  border-radius: 10px;
   padding: 20px;
+  width: 200px; /* Largura fixa para os cards */
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
-}
-
-.member:hover {
-  transform: translateY(-5px);
+  display: flex;
+  flex-direction: column; /* Faz o conteúdo ficar em coluna */
+  justify-content: space-between; /* Garante que o conteúdo tenha espaçamento dentro do card */
 }
 
 .member img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 10px;
-  border: 3px solid #8B5DFF;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100px; /* Largura fixa para as imagens */
+  height: 100px; /* Altura fixa para as imagens */
+  border-radius: 50%; /* Torna as imagens circulares */
+  object-fit: cover; /* Faz com que a imagem se ajuste bem ao formato circular */
+  margin: 0 auto; /* Centraliza a imagem no card */
 }
 
 .member p {
-  font-weight: 500;
-  color: #eaeaea;
+  font-size: 1em; /* Tamanho da fonte ajustado */
+  margin-top: 10px;
+  color: #fff;
+  white-space: nowrap; /* Evita que o texto quebre para a próxima linha */
+  overflow: hidden; /* Garante que o texto não vaze para fora do card */
+  text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
 }
+
 .member span {
   display: block;
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: #555;
-  word-break: break-word;
-  text-align: left;
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #b0b0b0; /* Cor mais suave para os links */
+  white-space: nowrap; /* Impede que o texto se quebre em várias linhas */
+  overflow: hidden; /* Impede o vazamento do texto */
+  text-overflow: ellipsis; /* Adiciona "..." no final do texto longo */
 }
 
-/* Destaque do integrante do meio */
-.member:nth-child(3) {
-  transform: scale(1.2);
+.member:hover {
+  transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
 }
 
-.member:nth-child(3) img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%; /* mantém a forma circular */
-  object-fit: cover;
-}
 
 /* Rodapé */
 .footer {
