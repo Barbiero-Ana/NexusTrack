@@ -164,7 +164,7 @@ body {
   text-align: center;
   padding: 0 20px;
   margin-top: 20px;
-  margin-bottom: auto;
+  margin-bottom: 40px;
 }
 
 .beneficios h2 {
@@ -222,7 +222,7 @@ body {
 .team h2 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #8B5DFF;
 }
 
@@ -230,6 +230,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 30px;
+  margin-top: auto;
   justify-items: center;
 }
 
