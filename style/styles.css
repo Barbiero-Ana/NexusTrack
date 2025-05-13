@@ -43,6 +43,22 @@ body {
   object-fit: cover;
 }
 
+.header-nav {
+  display: flex;
+  gap: 20px;
+  font-weight: 500;
+}
+
+.header-nav a {
+  color: #8B5DFF;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.header-nav a:hover {
+  color: #eaeaea;
+}
+
 /* Conteúdo principal */
 .main-content {
   max-width: 1000px;
@@ -178,6 +194,10 @@ body {
 
   .logo {
     font-size: 1.2rem;
+  }
+
+  .header-nav {
+    display: none; /* Esconde os links no modo mobile */
   }
 
   .team h2 {
