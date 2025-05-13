@@ -343,6 +343,26 @@ html {
   font-weight: 500;
   color: #eaeaea;
 }
+.member span {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  word-break: break-word;
+  text-align: left;
+}
+
+/* Destaque do integrante do meio */
+.member:nth-child(3) {
+  transform: scale(1.2);
+}
+
+.member:nth-child(3) img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* mantém a forma circular */
+  object-fit: cover;
+}
 
 /* Rodapé */
 .footer {
