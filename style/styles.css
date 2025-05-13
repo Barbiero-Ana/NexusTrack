@@ -87,6 +87,10 @@ body {
 .header-buttons .btn:hover {
   background-color: #6f3cc1; /* Cor mais escura para o hover */
 }
+.header-buttons a {
+  text-decoration: none; /* Remove o sublinhado */
+}
+
 
 /* Conteúdo principal */
 .main-content {
