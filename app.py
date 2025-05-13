@@ -98,3 +98,65 @@ st.markdown("""
         Acompanhe em tempo real e garanta um processo mais eficiente e ágil para sua empresa.
     </div>
 """, unsafe_allow_html=True)
+
+
+
+
+st.markdown("""
+    <style>
+        .circle-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .circle-item {
+            text-align: center;
+            flex: 1 1 18%;
+        }
+
+        .circle-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #8B5DFF;
+            transition: transform 0.3s ease;
+        }
+
+        .circle-img:hover {
+            transform: scale(1.05);
+        }
+
+        .circle-title {
+            margin-top: 10px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+
+    <div class="circle-grid">
+        <div class="circle-item">
+            <img src="https://via.placeholder.com/120" class="circle-img">
+            <div class="circle-title">Título 1</div>
+        </div>
+        <div class="circle-item">
+            <img src="https://via.placeholder.com/120" class="circle-img">
+            <div class="circle-title">Título 2</div>
+        </div>
+        <div class="circle-item">
+            <img src="https://via.placeholder.com/120" class="circle-img">
+            <div class="circle-title">Título 3</div>
+        </div>
+        <div class="circle-item">
+            <img src="https://via.placeholder.com/120" class="circle-img">
+            <div class="circle-title">Título 4</div>
+        </div>
+        <div class="circle-item">
+            <img src="https://via.placeholder.com/120" class="circle-img">
+            <div class="circle-title">Título 5</div>
+        </div>
+    </div>
+""", unsafe_allow_html=True)
