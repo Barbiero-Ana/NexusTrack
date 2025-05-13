@@ -115,6 +115,8 @@ body {
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s;
+  width: 180px; /* Tamanho fixo para garantir que todos os quadrados tenham a mesma largura */
+  height: 200px; /* Tamanho fixo */
 }
 
 .member:hover {
@@ -122,8 +124,8 @@ body {
 }
 
 .member img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 50%;
   display: block;
@@ -132,10 +134,10 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .member p {
   font-weight: 500;
   color: #eaeaea;
+  margin-top: 10px; /* Garantir que o nome não fique muito colado na imagem */
 }
 
 /* Responsivo */
@@ -160,8 +162,14 @@ body {
   }
 }
 
+@media (max-width: 500px) {
   .member img {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
   }
 
+  .member {
+    width: 160px;
+    height: 220px; /* Ajuste de tamanho para telas pequenas */
+  }
+}
