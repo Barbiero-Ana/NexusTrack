@@ -43,22 +43,6 @@ body {
   object-fit: cover;
 }
 
-.menu {
-  display: flex;
-  gap: 20px;
-}
-
-.menu a {
-  color: #333;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.menu a:hover {
-  color: #8B5DFF;
-}
-
 /* Conteúdo principal */
 .main-content {
   max-width: 1000px;
@@ -115,8 +99,6 @@ body {
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s;
-  width: 180px; /* Tamanho fixo para garantir que todos os quadrados tenham a mesma largura */
-  height: 200px; /* Tamanho fixo */
 }
 
 .member:hover {
@@ -124,8 +106,8 @@ body {
 }
 
 .member img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border-radius: 50%;
   display: block;
@@ -137,7 +119,53 @@ body {
 .member p {
   font-weight: 500;
   color: #eaeaea;
-  margin-top: 10px; /* Garantir que o nome não fique muito colado na imagem */
+}
+
+/* Rodapé */
+.footer {
+  background-color: #1e1e1e;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #eaeaea;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.footer-nav a {
+  color: #8B5DFF;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #eaeaea;
+}
+
+.footer-rights {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #eaeaea;
 }
 
 /* Responsivo */
@@ -148,60 +176,22 @@ body {
     gap: 20px;
   }
 
-  .menu {
-    display: none; /* Esconde o menu em dispositivos pequenos */
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    text-align: left;
-  }
-
-  .menu a {
-    padding: 10px 0;
-    border-top: 1px solid #fff;
-  }
-
-  .hamburger {
-    display: block; /* Exibe o ícone do menu hamburguer */
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: #fff;
-    border-radius: 5px;
-  }
-}
-
-/* Menu ativo */
-.menu.active {
-  display: flex;
-}
-
-  .intro h1 {
-    font-size: 1.6rem;
+  .logo {
+    font-size: 1.2rem;
   }
 
   .team h2 {
     font-size: 1.4rem;
   }
 
-
-@media (max-width: 500px) {
-  .member img {
-    width: 100px;
-    height: 100px;
+  .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
   }
 
-  .member {
-    width: 160px;
-    height: 220px; /* Ajuste de tamanho para telas pequenas */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
   }
 }
