@@ -15,3 +15,5 @@ function moveCarousel() {
 
 // Intervalo de tempo para animar o carrossel
 setInterval(moveCarousel, 3000); // Muda os cards a cada 3 segundos
+
+

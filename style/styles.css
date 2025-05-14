@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #121212;
@@ -13,9 +19,7 @@ body {
   padding: 0 20px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+
 
 
 /* Cabeçalho */
@@ -428,14 +432,41 @@ html {
   color: #8B5DFF;
 }
 
+#btnTopo {
+  position: fixed;
+  bottom: 20px;   /* Distância do fundo da tela */
+  right: 20px;    /* Distância da lateral da tela */
+  display: none;  /* Inicialmente escondido */
+  background-color: #8B5DFF; /* Cor roxa */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Para fazer o botão redondo */
+  width: 60px; /* Largura do botão */
+  height: 60px; /* Altura do botão */
+  font-size: 30px; /* Tamanho da seta (↑) */
+  text-align: center;
+  line-height: 60px; /* Centraliza o texto verticalmente */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para dar destaque */
+  transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+  font-family: Arial, sans-serif; /* Garantir que a fonte seja compatível */
+}
+
+
 /* Responsivo */
 @media (max-width: 768px) {
   .header-nav {
     display: none;
   }
-  .header-buttons {
-    display: none;
+  #btnTopo {
+    display: block; /* Exibe o botão no mobile */
   }
+}
+
+/* Efeito ao passar o mouse (hover) */
+#btnTopo:hover {
+  background-color: #6a006a; /* Cor mais escura quando o mouse passa sobre o botão */
+}
 
   .about-project {
     flex-direction: column;
@@ -517,4 +548,9 @@ html {
   padding-right: 1rem;
 }
 
+/* Esconde o botão no desktop e em telas maiores */
+@media (min-width: 769px) {
+  #btnTopo {
+    display: none !important; /* Força o botão a não aparecer no desktop */
+  }
 }

@@ -11,6 +11,8 @@
       scroll-behavior: smooth;
     }
   </style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
 </head>
 <body>
   <header class="header">
@@ -25,8 +27,10 @@
       <a href="#demonstracao">Demonstração</a>
       <a href="#comparativo">Impacto</a>
     </nav>
+    
   
   </header>
+  <button id="btnTopo" onclick="voltarAoTopo()">↑</button>
 
   <main class="main-content">
     <section class="intro">
@@ -53,7 +57,7 @@
       </div>
     </section>
 
-    <section class="beneficios" id="beneficios">
+    <section class="beneficios" id="beneficios" data-aos="fade-up" data-aos-duration="2000">
       <h2>Benefícios</h2>
       <div class="beneficios-grid">
         <div class="beneficio">
@@ -90,7 +94,7 @@
 </section>
 
 <!-- Comparativo Antes e Depois -->
-<section class="comparativo" id="comparativo">
+<section class="comparativo" id="comparativo" data-aos="fade-up" data-aos-duration="1000">
   <h2>Antes vs Depois do NexusTrack</h2>
   <div class="comparativo-cards">
     <div class="card-comparativo antes">
@@ -114,7 +118,7 @@
   </div>
 </section>
 
-  <section class="team" id="equipe">
+  <section class="team" id="equipe" data-aos="fade-up" data-aos-duration="2000">
   <h2>Equipe</h2>
 
   <!-- GRADE PADRÃO PARA DESKTOP -->
@@ -142,7 +146,7 @@
   </div>
 
   <!-- CARROSSEL PARA MOBILE -->
-  <div class="team-carousel">
+  <div class="team-carousel" data-aos="fade-up" data-aos-duration="2000">
     <div class="carousel-track">
       <!-- Repetição dupla para criar efeito contínuo -->
       <a href="https://github.com/polarStrxt" class="member">
@@ -190,7 +194,7 @@
     </div>
   </div>
 </section>
-<div class="aviso-redes">
+<div class="aviso-redes" data-aos="fade-up" data-aos-duration="2000">
   <p>* Clique nos cards dos membros da equipe para acessar suas redes sociais.</p>
 </div>
 
@@ -216,5 +220,12 @@
 </footer>
 <!-- Link para o arquivo JavaScript -->
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scrollTop.js"></script>
+<script>
+  AOS.init();
+</script>
+<button id="btnTopo" onclick="voltarAoTopo()">↑</button>
+
 </body>
 </html>
