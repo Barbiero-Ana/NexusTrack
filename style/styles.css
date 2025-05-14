@@ -363,7 +363,10 @@ html {
   transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
 }
 
-
+/* Oculta o carrossel no desktop */
+.team-carousel {
+  display: none;
+}
 
 /* Rodapé */
 .footer {
@@ -430,22 +433,62 @@ html {
   object-fit: cover;  /* Garante que a imagem cubra a área do contêiner sem deformar */
 }
   .team-grid {
-    display: flex; /* Flexbox para organizar os cards em linha */
-    flex-wrap: nowrap; /* Não deixa os itens quebrarem para a próxima linha */
+    display: none;
   }
 
   .team-carousel {
-    overflow: hidden; /* Garantir que nada ultrapasse o limite do container */
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
   }
 
-  .member {
-    width: 50%; /* Cada card ocupará metade da tela */
-    max-width: 230px; /* Limita um pouco a largura máxima */
-  }
-
-  /* Adicionando animação para o carrossel somente em telas pequenas */
-  .team-grid {
+  .carousel-track {
     display: flex;
-    animation: moveCarousel 12s linear infinite;
+    animation: scroll 30s linear infinite;
+    width: max-content;
   }
+
+  .team-carousel .member {
+    width: 200px;
+    flex-shrink: 0;
+    margin: 0 10px;
+    background: #1e1e1e;
+    border-radius: 12px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+
+  .team-carousel .member img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  .team-carousel .member p {
+    font-weight: bold;
+    margin: 5px 0;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .team-carousel .member span {
+    font-size: 14px;
+    color: #fff;
+    word-break: break-word;
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .team-carousel {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 }
