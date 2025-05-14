@@ -364,6 +364,7 @@ html {
 }
 
 
+
 /* Rodapé */
 .footer {
   display: flex;
@@ -428,5 +429,23 @@ html {
   height: auto;  /* Mantém a proporção da imagem */
   object-fit: cover;  /* Garante que a imagem cubra a área do contêiner sem deformar */
 }
-  
+  .team-grid {
+    display: flex; /* Flexbox para organizar os cards em linha */
+    flex-wrap: nowrap; /* Não deixa os itens quebrarem para a próxima linha */
+  }
+
+  .team-carousel {
+    overflow: hidden; /* Garantir que nada ultrapasse o limite do container */
+  }
+
+  .member {
+    width: 50%; /* Cada card ocupará metade da tela */
+    max-width: 230px; /* Limita um pouco a largura máxima */
+  }
+
+  /* Adicionando animação para o carrossel somente em telas pequenas */
+  .team-grid {
+    display: flex;
+    animation: moveCarousel 12s linear infinite;
+  }
 }
