@@ -369,6 +369,31 @@ html {
   display: none;
 }
 
+.info-redes {
+  background-color: #f4f4f4;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+}
+
+.info-conteudo {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.aviso-redes {
+  text-align: center;
+  margin-top: auto;
+  color: #aaa; /* cinza claro */
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+
 /* Rodapé */
 .footer {
   display: flex;
