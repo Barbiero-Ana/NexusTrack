@@ -330,6 +330,7 @@ html {
   display: flex;
   flex-direction: column; /* Faz o conteúdo ficar em coluna */
   justify-content: space-between; /* Garante que o conteúdo tenha espaçamento dentro do card */
+  text-decoration: none; /* Remove o sublinhado do link */
 }
 
 .member img {
